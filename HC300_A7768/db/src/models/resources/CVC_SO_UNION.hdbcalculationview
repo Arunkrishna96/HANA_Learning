@@ -11,6 +11,7 @@
     <resourceUri>HC::SALES_DATA</resourceUri>
   </DataSource>
 </dataSources>
+<snapshotProcedures/>
 <calculationViews>
   <calculationView xsi:type="Calculation:AggregationView" id="SAP_ERP_Data">
     <viewAttributes>
@@ -47,13 +48,13 @@
       <viewAttribute id="NET_AMOUNT" aggregationType="sum"/>
     </viewAttributes>
     <calculatedViewAttributes/>
-    <input node="SAP_ERP_Data">
+    <input node="SAP_ERP_Data" emptyUnionBehavior="NO_ROW">
       <mapping xsi:type="Calculation:AttributeMapping" target="CLIENT" source="CLIENT"/>
       <mapping xsi:type="Calculation:AttributeMapping" target="CURRENCY_CODE" source="CURRENCY_CODE"/>
       <mapping xsi:type="Calculation:AttributeMapping" target="GROSS_AMOUNT" source="GROSS_AMOUNT"/>
       <mapping xsi:type="Calculation:AttributeMapping" target="NET_AMOUNT" source="NET_AMOUNT"/>
     </input>
-    <input node="3rd_Party_Data">
+    <input node="3rd_Party_Data" emptyUnionBehavior="NO_ROW">
       <mapping xsi:type="Calculation:ConstantAttributeMapping" target="CLIENT" null="false" value="800"/>
       <mapping xsi:type="Calculation:AttributeMapping" target="CURRENCY_CODE" source="CURRENCY"/>
       <mapping xsi:type="Calculation:AttributeMapping" target="GROSS_AMOUNT" source="GROSS_AMOUNT_2"/>
@@ -77,10 +78,12 @@
     <measure id="GROSS_AMOUNT" order="3" aggregationType="sum" measureType="simple">
       <descriptions defaultDescription="GROSS_AMOUNT"/>
       <measureMapping columnObjectName="Union_1" columnName="GROSS_AMOUNT"/>
+      <exceptionAggregationMetadata/>
     </measure>
-    <measure id="NET_AMOUNT" order="4" aggregationType="sum" measureType="simple">
+    <measure id="NET_AMOUNT" order="4" aggregationType="sum" measureType="simple" hidden="true">
       <descriptions defaultDescription="NET_AMOUNT"/>
       <measureMapping columnObjectName="Union_1" columnName="NET_AMOUNT"/>
+      <exceptionAggregationMetadata/>
     </measure>
   </baseMeasures>
   <calculatedMeasures/>
@@ -90,21 +93,21 @@
 <layout>
   <shapes>
     <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
-      <upperLeftCorner x="221.11302679000914" y="112"/>
+      <upperLeftCorner x="221" y="112"/>
     
       <rectangleSize width="160"/>
     </shape>
   
     <shape expanded="true" modelObjectName="SAP_ERP_Data" modelObjectNameSpace="CalculationView">
-      <upperLeftCorner x="92" y="356.9999988079071"/>
+      <upperLeftCorner x="92" y="356"/>
       <rectangleSize height="30" width="160"/>
     </shape>
     <shape expanded="true" modelObjectName="3rd_Party_Data" modelObjectNameSpace="CalculationView">
-      <upperLeftCorner x="302.00000000000006" y="356.9999988079071"/>
+      <upperLeftCorner x="302" y="356"/>
       <rectangleSize height="30" width="160"/>
     </shape>
     <shape expanded="true" modelObjectName="Union_1" modelObjectNameSpace="CalculationView">
-      <upperLeftCorner x="221.11302679000914" y="217"/>
+      <upperLeftCorner x="221" y="217"/>
       <rectangleSize height="30" width="160"/>
     </shape>
   </shapes>
