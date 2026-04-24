@@ -1,0 +1,13 @@
+COLUMN TABLE "HC::TCURR" (
+    "MANDT" NVARCHAR(3) DEFAULT '000' NOT NULL      COMMENT 'Client',
+    "KURST" NVARCHAR(4) DEFAULT ' ' NOT NULL        COMMENT 'Exchange Rate Type',
+    "FCURR" NVARCHAR(5) DEFAULT ' ' NOT NULL        COMMENT 'From currency',
+    "TCURR" NVARCHAR(5) DEFAULT ' ' NOT NULL        COMMENT 'To-currency',
+    "GDATU" NVARCHAR(8) DEFAULT ' ' NOT NULL        COMMENT 'Date As of Which the Exchange Rate Is Effective',
+    "UKURS" DECIMAL(9,5) DEFAULT 0 NOT NULL         COMMENT 'Exchange Rate',
+    "FFACT" DECIMAL(9,0) DEFAULT 0 NOT NULL         COMMENT 'Ratio for the "From" Currency Units',
+    "TFACT" DECIMAL(9,0) DEFAULT 0 NOT NULL         COMMENT 'Ratio for the "To" Currency Units',
+    PRIMARY KEY ("MANDT", "KURST", "FCURR", "TCURR", "GDATU")
+    )
+UNLOAD PRIORITY 5  AUTO MERGE
+COMMENT 'Exchange Rates';

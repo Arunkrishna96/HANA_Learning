@@ -1,0 +1,9 @@
+COLUMN TABLE "HC::TCURW" (
+    "MANDT" NVARCHAR(3) DEFAULT '000' NOT NULL      COMMENT 'Client',
+    "SPRAS" NVARCHAR(1) DEFAULT ' ' NOT NULL        COMMENT 'Language Key',
+    "KURST" NVARCHAR(4) DEFAULT ' ' NOT NULL        COMMENT 'Exchange Rate Type',
+    "CURVW" NVARCHAR(40) DEFAULT ' ' NOT NULL       COMMENT 'Exchange rate type usage',
+    PRIMARY KEY ("MANDT", "SPRAS", "KURST")
+    )
+UNLOAD PRIORITY 5  AUTO MERGE
+COMMENT 'Usage of Exchange Rate Types';

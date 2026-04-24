@@ -1,0 +1,22 @@
+{
+    "format_version": 1,
+    "imports": [
+        {
+            "target_table": "HC::TCURR",
+            "source_data": {
+                "data_type": "CSV",
+                "file_name": "HC::TCURR.csv",
+                "has_header": false
+            },
+            "import_settings": {
+                "include_filter": [ ],
+                "import_columns": [
+                    "MANDT", "KURST", "FCURR", "TCURR", "GDATU", "UKURS", "FFACT", "TFACT"
+                ]
+            },
+                "column_mappings": {
+                    "MANDT": 1, "KURST": 2, "FCURR": 3, "TCURR": 4, "GDATU": 5, "UKURS": 6, "FFACT": 7, "TFACT": 8
+                }
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+COLUMN TABLE "HC::TCURC" (
+    "MANDT" NVARCHAR(3) DEFAULT '000' NOT NULL      COMMENT 'Client',
+    "WAERS" NVARCHAR(5) DEFAULT ' ' NOT NULL        COMMENT 'Currency Key',
+    "ISOCD" NVARCHAR(3) DEFAULT ' ' NOT NULL        COMMENT 'ISO currency code',
+    "ALTWR" NVARCHAR(3) DEFAULT ' ' NOT NULL        COMMENT 'Alternative key for currencies',
+    "GDATU" NVARCHAR(8) DEFAULT '00000000' NOT NULL COMMENT 'Date until which the currency is valid',
+    "XPRIMARY" NVARCHAR(1) DEFAULT ' ' NOT NULL     COMMENT 'Primary SAP Currency Code for ISO Code',
+    PRIMARY KEY ("MANDT", "WAERS")
+     )
+UNLOAD PRIORITY 5  AUTO MERGE
+COMMENT 'Currency Codes';

@@ -1,0 +1,10 @@
+COLUMN TABLE "HC::TCURN" (
+    "MANDT" NVARCHAR(3) DEFAULT '000' NOT NULL      COMMENT 'Client',
+    "FCURR" NVARCHAR(5) DEFAULT ' ' NOT NULL        COMMENT 'From currency',
+    "TCURR" NVARCHAR(5) DEFAULT ' ' NOT NULL        COMMENT 'To-currency',
+    "GDATU" NVARCHAR(8) DEFAULT ' ' NOT NULL        COMMENT 'Date As of Which the Exchange Rate Is Effective',
+    "NOTATION" NVARCHAR(1) DEFAULT ' ' NOT NULL     COMMENT 'Quotation type for currency translation',
+    PRIMARY KEY ("MANDT", "FCURR", "TCURR", "GDATU")
+    )
+UNLOAD PRIORITY 5  AUTO MERGE
+COMMENT 'Quotations';

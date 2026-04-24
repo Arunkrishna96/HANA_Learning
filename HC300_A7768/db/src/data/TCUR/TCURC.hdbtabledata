@@ -1,0 +1,22 @@
+{
+    "format_version": 1,
+    "imports": [
+        {
+            "target_table": "HC::TCURC",
+            "source_data": {
+                "data_type": "CSV",
+                "file_name": "HC::TCURC.csv",
+                "has_header": false
+            },
+            "import_settings": {
+                "include_filter": [ ],
+                "import_columns": [
+                    "MANDT", "WAERS", "ISOCD", "ALTWR", "GDATU", "XPRIMARY"
+                ]
+            },
+                "column_mappings": {
+                    "MANDT": 1, "WAERS": 2, "ISOCD": 3, "ALTWR": 4, "GDATU": 5, "XPRIMARY": 6
+                }
+        }
+    ]
+}

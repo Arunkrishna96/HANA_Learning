@@ -1,0 +1,14 @@
+COLUMN TABLE "HC::TCURF" (
+    "MANDT" NVARCHAR(3) DEFAULT '000' NOT NULL          COMMENT 'Client',
+    "KURST" NVARCHAR(4) DEFAULT ' ' NOT NULL            COMMENT 'Exchange Rate Type',
+    "FCURR" NVARCHAR(5) DEFAULT ' ' NOT NULL            COMMENT 'From currency',
+    "TCURR" NVARCHAR(5) DEFAULT ' ' NOT NULL            COMMENT 'To-currency',
+    "GDATU" NVARCHAR(8) DEFAULT ' ' NOT NULL            COMMENT 'Date from which the entry is valid',
+    "FFACT" DECIMAL(9,0) DEFAULT 0 NOT NULL             COMMENT 'Ratio for the "From" Currency Units',
+    "TFACT" DECIMAL(9,0) DEFAULT 0 NOT NULL             COMMENT 'Ratio for the "To" Currency Units',
+    "ABWCT" NVARCHAR(4) DEFAULT ' ' NOT NULL            COMMENT 'Alternative exchange rate type',
+    "ABWGA" NVARCHAR(8) DEFAULT '00000000' NOT NULL     COMMENT 'Date from which the alternative exchange rate type is valid',
+    PRIMARY KEY ("MANDT", "KURST", "FCURR", "TCURR", "GDATU")
+    )
+UNLOAD PRIORITY 5  AUTO MERGE
+COMMENT 'Conversion Factors';

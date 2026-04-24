@@ -1,0 +1,22 @@
+{
+    "format_version": 1,
+    "imports": [
+        {
+            "target_table": "HC::TCURW",
+            "source_data": {
+                "data_type": "CSV",
+                "file_name": "HC::TCURW.csv",
+                "has_header": false
+            },
+            "import_settings": {
+                "include_filter": [ ],
+                "import_columns": [
+                    "MANDT", "SPRAS", "KURST", "CURVW"
+                ]
+            },
+                "column_mappings": {
+                    "MANDT": 1, "SPRAS": 2, "KURST": 3, "CURVW": 4
+                }
+        }
+    ]
+}

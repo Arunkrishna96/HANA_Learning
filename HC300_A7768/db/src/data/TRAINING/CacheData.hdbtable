@@ -1,0 +1,5 @@
+column table "HC::CACHED_TABLE" (
+    COLUMN1 NVARCHAR(5),
+    COLUMN2 NVARCHAR(5),
+    MEASURE Decimal(5,2)
+    )

@@ -1,0 +1,22 @@
+{
+    "format_version": 1,
+    "imports": [
+        {
+            "target_table": "HC::TCURX",
+            "source_data": {
+                "data_type": "CSV",
+                "file_name": "HC::TCURX.csv",
+                "has_header": false
+            },
+            "import_settings": {
+                "include_filter": [ ],
+                "import_columns": [
+                    "CURRKEY", "CURRDEC"
+                ]
+            },
+                "column_mappings": {
+                    "CURRKEY": 1, "CURRDEC": 2
+                }
+        }
+    ]
+}

@@ -1,0 +1,22 @@
+{
+    "format_version": 1,
+    "imports": [
+        {
+            "target_table": "HC::TCURV",
+            "source_data": {
+                "data_type": "CSV",
+                "file_name": "HC::TCURV.csv",
+                "has_header": false
+            },
+            "import_settings": {
+                "include_filter": [ ],
+                "import_columns": [
+                    "MANDT", "KURST", "XINVR", "BWAER", "XBWRL", "GKUZU", "BKUZU", "XFIXD", "XEURO"
+                ]
+            },
+                "column_mappings": {
+                    "MANDT": 1, "KURST": 2, "XINVR": 3, "BWAER": 4, "XBWRL": 5, "GKUZU": 6, "BKUZU": 7, "XFIXD": 8, "XEURO": 9
+                }
+        }
+    ]
+}

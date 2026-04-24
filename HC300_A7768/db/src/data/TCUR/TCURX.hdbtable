@@ -1,0 +1,6 @@
+COLUMN TABLE "HC::TCURX" (
+    "CURRKEY" NVARCHAR(5) DEFAULT ' ' NOT NULL      COMMENT 'Decimal Places in Currencies',
+    "CURRDEC" SMALLINT DEFAULT 0 NOT NULL           COMMENT 'Number of decimal places',
+    PRIMARY KEY ("CURRKEY")
+    )
+UNLOAD PRIORITY 5  AUTO MERGE

@@ -1,0 +1,14 @@
+COLUMN TABLE "HC::TCURV" (
+    "MANDT" NVARCHAR(3) DEFAULT '000' NOT NULL  COMMENT 'Client',
+    "KURST" NVARCHAR(4) DEFAULT ' ' NOT NULL    COMMENT 'Exchange Rate Type',
+    "XINVR" NVARCHAR(1) DEFAULT ' ' NOT NULL    COMMENT 'Indicator: Calculation allowed with inverted exchange rate ?',
+    "BWAER" NVARCHAR(5) DEFAULT ' ' NOT NULL    COMMENT 'Reference currency for currency translation',
+    "XBWRL" NVARCHAR(1) DEFAULT ' ' NOT NULL    COMMENT 'Ind.: Base curr. is "from" curr. in the exchange rate table',
+    "GKUZU" NVARCHAR(4) DEFAULT ' ' NOT NULL    COMMENT 'Exch. rate type of av. rate used to determine buying rate',
+    "BKUZU" NVARCHAR(4) DEFAULT ' ' NOT NULL    COMMENT 'Exch.rate type of av. rate used to determine selling rate',
+    "XFIXD" NVARCHAR(1) DEFAULT ' ' NOT NULL    COMMENT 'Indicator: Exchange rate type uses fixed exchange rates',
+    "XEURO" NVARCHAR(1) DEFAULT ' ' NOT NULL    COMMENT 'Indicator: Exchange rate type uses special translation model',
+    PRIMARY KEY ("MANDT", "KURST")
+    )
+UNLOAD PRIORITY 5  AUTO MERGE
+COMMENT 'Exchange rate types for currency translation';
