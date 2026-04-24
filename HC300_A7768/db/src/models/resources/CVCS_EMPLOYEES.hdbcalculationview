@@ -20,9 +20,7 @@
       <viewAttribute id="LANGUAGE" measureType="simple"/>
       <viewAttribute id="LAST_NAME" measureType="simple"/>
       <viewAttribute id="PR_ADDRESS_GUID" measureType="simple"/>
-      <viewAttribute id="SALARY_AMOUNT" measureType="simple"/>
-      <viewAttribute id="SEX" measureType="simple"/>
-    </viewAttributes>
+      <viewAttribute id="SALARY_AMOUNT" measureType="simple"/></viewAttributes>
     <calculatedViewAttributes/>
     <input node="HC::SNWD_EMPLOYEES"/>
   </calculationView>
@@ -60,10 +58,6 @@
     <attribute id="PR_ADDRESS_GUID" order="8" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="PR_ADDRESS_GUID"/>
       <keyMapping columnObjectName="Projection_1" columnName="PR_ADDRESS_GUID"/>
-    </attribute>
-    <attribute id="SEX" order="10" displayAttribute="false" attributeHierarchyActive="false">
-      <descriptions defaultDescription="SEX"/>
-      <keyMapping columnObjectName="Projection_1" columnName="SEX"/>
     </attribute>
     <attribute id="CLIENT$local">
       <descriptions defaultDescription="CLIENT"/>
